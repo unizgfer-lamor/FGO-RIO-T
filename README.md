@@ -106,6 +106,5 @@ If you find this project useful, please consider giving it a star ⭐. Your supp
 This work builds upon the implementation of the [RIO](https://github.com/ethz-asl/rio) package by ETH Zurich's Autonomous Systems Lab. Specific functions and modules were adapted
 to support our implementation. We gratefully acknowledge their contribution to the open-source robotics community. 
 
-This research has been supported by the European Regional Development Fund under the grant PK.1.1.02.0008 (DATACROSS).
-
+This research has been supported by the European Regional Development Fund under grant agreement PK.1.1.10.0007 (DATACROSS) and the Croatian Science Foundation under grant agreement DOK-NPOO-2023-10-6705.
 
