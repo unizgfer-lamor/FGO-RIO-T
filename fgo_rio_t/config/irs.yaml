@@ -1,0 +1,58 @@
+ROS:
+    queue_size: 100
+    imu_topic: /sensor_platform/imu
+    radar_topic: /radar/velocity
+    odometry_topic: /odometry
+    odometry_optimization_topic: /odometry_opt
+    odometry_frame_id: /world
+    time_offset_topic: /dt
+
+
+Initial_state:
+    R_IW: [1.00, 0.00, 0.00, 0.00]   # w, x, y, z
+    W_p_IW: [0.00, 0.00, 0.00] # [m] Position of IMU in world frame 
+    W_v: [0.00, 0.00, 0.00] # [m/s] Velocity of IMU in world frame
+    b_0_w_deg: [0.0, 0.0, -0.05] # [deg] taken from EKF-RIO launch file  
+    b_g: [0.0, 0.0, 0.0] # Gyro bias  -- if IMU initialized is false then this is the initial bias 
+    b_a: [0.0, 0.0, 0.0] # Acc bias -- if IMU initialized is false then this is the initial bias
+    delta_t: 0.00  # [s] Time offset between IMU and radar measurements
+
+PriorNoise:
+    R_IW: [0.00, 0.00, 0.00]
+    W_p_IW: [0.00, 0.00, 0.00]
+    W_v: [0.00, 0.00, 0.00]
+    b_a: [0.1, 0.1, 0.1]
+    b_g: [2.0e-3, 2.0e-3, 2.0e-3]
+    delta_t: 0.075 
+
+iSAM2:
+    relinearize_threshold: 0.1
+    relinearize_skip: 10
+    smoother_lag: 1.0 # [s] 
+
+IMU:
+    initialize: true
+    duration: 10.0   # [s] Time for IMU bias initialization
+
+    b_a_sigma: 1.0e-4
+    b_g_sigma: 1.0e-5
+    b_a_int_sigma: 1.0e-6
+    b_g_int_sigma: 1.0e-6
+
+    a_sigma: 5.0e-1               
+    g_sigma: 1.0e-1        
+    int_sigma: 1.0e-6  
+
+
+ExtrinsicCalibration: # Extrinsic calibration of IMU and radar
+    R_IR: [0.005349194, 0.699462156, 0.714611909, 0.007341567]   # w, x, y, z
+    p_IR: [0.03, 0.03, -0.06] # [m] 
+
+
+Noise:
+    Radar:
+        huber_k: 0.01 # Huber loss parameter 
+    delta_t: 1.0e-7 
+
+
+

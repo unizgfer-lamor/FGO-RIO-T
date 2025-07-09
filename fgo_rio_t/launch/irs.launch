@@ -1,0 +1,10 @@
+<launch>
+    <arg name="online" default="true"/>
+
+    
+   <node pkg="fgo_rio_t" type="fgo_rio_t_node" name="fgo_rio_t" output="screen">
+        <rosparam file="$(find fgo_rio_t)/config/irs.yaml" />
+        <param name="OnlineCalibration/temporal" value="$(arg online)" />
+    </node>
+    
+</launch>

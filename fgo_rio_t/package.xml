@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>fgo_rio_t</name>
+  <version>1.0.0</version>
+  <description>A factor graph-based loosely-coupled radar-inertial odometry that integrates online temporal calibration.</description>
+
+  <maintainer email="vlaho-josip.stironja@fer.unizg.hr">Vlaho-Josip Štironja</maintainer>
+  
+  <license>GPLv3</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>message_generation</depend>
+  <depend>message_runtime</depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>sensor_msgs</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <depend>nodelet</depend>
+  
+ <export>
+  </export>
+
+</package>
