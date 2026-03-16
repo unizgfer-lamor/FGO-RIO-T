@@ -77,12 +77,15 @@ This script will automatically run the radar-inertial odometry pipeline on all p
 If you use this work in your research, please consider citing our paper:
 
 ```bibtex
-@article{stironja2025impact,
+@inproceedings{vstironja2025impact,
   title={Impact of Temporal Delay on Radar-Inertial Odometry},
-  author={Štironja, Vlaho-Josip and Petrović, Luka and Peršić, Juraj and Marković, Ivan and Petrović, Ivan},
-  journal={arXiv preprint arXiv:2503.02509},
-  year={2025}
+  author={{\v{S}}tironja, Vlaho-Josip and Petrovi{\'c}, Luka and Per{\v{s}}i{\'c}, Juraj and Markovi{\'c}, Ivan and Petrovi{\'c}, Ivan},
+  booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={4961--4967},
+  year={2025},
+  organization={IEEE}
 }
+
 ```
 
 ---
